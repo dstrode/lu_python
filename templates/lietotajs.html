@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>
+        <strong>{{ user.lietotajs }}
+            E-mail: {{ user.epasts }}
+        </strong><br>
+</p>
+
+{% if user.image %}
+    <img src="{{ user.image.url }}">
+{% endif %}
+{% endblock %}
+

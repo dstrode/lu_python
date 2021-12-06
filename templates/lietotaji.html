@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul>
+    {% for user in lietotaji %}
+        <li>
+            <a href="{% url 'viens-lietotajs' user_id=user.id %}">
+                    ID: {{ user.id }} <br>
+                    <strong>{{ user.user_name }}
+                    </strong>
+                    <br>
+                    E-mail: {{ user.epasts }}
+            </a>
+        </li>
+
+    {% endfor %}
+</ul>
+
+{% endblock %}
